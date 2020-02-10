@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If_sats_loop_function</title>
+
+
+
+    <!--  Jag delar in det i olika skript taggar istället så kan ni kommentera ut o prova varje för sig-->
+
+    <!--
+    <script>
+        
+                let namn = 'patrik';
+                let nummer = 10;
+        
+        
+                if (nummer == 10) {
+                    console.log("ja namnet är " + nummer);
+                } else {
+                    console.log("Falskt");
+                }
+        
+        
+    </script> 
+    -->
+
+
+    <!--
+
+    <script>
+    
+            let lista = [1, 2, 3, 4];
+    
+            /* Skriva ut listans innehåll i console*/
+            console.log(lista[0]);
+            console.log(lista[1]);
+            console.log(lista[2]);
+            console.log(lista[3]);
+            
+    
+    </script>
+
+    -->
+
+    <!--
+
+    <script>
+    
+
+            let lista = [1, 2, 3, 4];
+
+            /* Använda en loop att skriva ut listans innehåll i console */
+
+            for (let i = 0; i < lista.length; i++) {
+                console.log(lista[i]);
+        
+            }
+            
+        
+    </script>
+
+    <script>     
+     
+
+            let siffra = 3;  /*Det nummer som ska letas efter i listan */
+
+
+            let hittadeSiffra = false;  /* Variabel som håller koll på om siffra hittats eller ej  */ 
+        
+            /* Loopa genom hela listan i = index dvs vilken position i listan som ska läsas */
+            for (let i = 0; i < lista.length; i++) {
+
+                /* Kolla om siffra = det som finns i listan på den aktuella positionen i*/
+                if (siffra == lista[i]) {
+                    /* Om siffra fanns i listan så kommer följande göras */
+                    console.log("Hittade siffran " + siffra + " i listan");
+                    hittadeSiffra = true;  /* Här får hittadeSiffra värdet true om siffra hittades */
+                    break; /* Här hoppar programmet ur loopen då det inte är någon idé att fortsätta om den hittat det den söker */
+                }
+        
+        
+            }
+        
+            /* Om programmet loopar igenom hela listan utan att hitta det den söker så kommer variabel
+               hittdeSiffra fortfarande innehålla värdet false dvs vara falsy
+            */   
+        
+            if (hittadeSiffra == false) {
+                /* Här hamnar programmet om siffra inte hittades i listan */
+                console.log("Hittade inte siffran " + siffra);
+            }
+    
+    
+    
+    </script>
+        
+    -->
+
+    <script>
+
+        let lista = [1, 2, 3, 4];
+
+        /* En funktion som heter letaEfterSiffra */
+
+        function letaEfterSiffra(siffra) {
+
+            /* Loopa genom hela listan i = index dvs vilken position i listan som ska läsas */
+            for (let i = 0; i < lista.length; i++) {
+
+                /* Kolla om siffra = det som finns i listan på den aktuella positionen i*/
+                if (siffra == lista[i]) {
+                    /* Om siffra fanns i listan så kommer följande göras */
+                    return "Hittade siffran " + siffra + " i listan";
+                    /* return betyder returnera till den som anropar funktionen */
+                }
+
+
+            }
+
+            /* OM inte siffra hittades i loopen ovan så fortsätter programmet ner hit och skickas en annan sträng
+               i retur från funktionen till den som anropade. */
+
+            return "Hittade inte siffran " + siffra; /*Avsluta funktionen och skicka tillbaka denna textsträng */
+
+        }
+
+        let meddelande = letaEfterSiffra(7); /* variabel meddelande tilldelas det som returneras 
+                                                från funktionen letaEfterSiffra som här oxå anropas
+                                                och till funktionen skickar man med en parameter som 
+                                                iu detta exempel är siffran 7*/
+
+
+        console.log(meddelande); /* skriv ut meddelande i konsoll */
+
+
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>
